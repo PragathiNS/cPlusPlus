@@ -1,0 +1,29 @@
+Introduction to strings
+An example of compound type is the string class.
+Variables of this type are able to store sequences of characters, such as words or sentences. A very useful feature!
+
+We need to include the header where the type is defined within the standard library (header <string>) to declare and use objects of this type.
+#include <string>
+
+Initialization formats:
+string mystring = "This is a string";
+string mystring ("This is a string");
+string mystring {"This is a string"};
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+  string mystring;
+
+  //Initial value
+  mystring = "This is the initial string content";
+  cout << mystring << endl;
+
+  //value changed during execution
+  mystring = "This is a different string content";
+  cout << mystring << endl;
+  return 0;
+}

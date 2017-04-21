@@ -1,0 +1,103 @@
+Operators
+1. Assignment operator (=)
+
+int a, b;         // a:?,  b:?
+  a = 10;           // a:10, b:?
+  b = 4;            // a:10, b:4
+  a = b;            // a:4,  b:4
+  b = 7;            // a:4,  b:7
+
+
+y = 2 + (x = 5);
+is evaluated as,
+x = 5;
+y = 2 + x; //value of y is 7
+
+2. Arithmetic operators ( +, -, *, /, % )
+
+operator	description
++	        addition
+-	        subtraction
+*	        multiplication
+/	        division
+% 	      modulo
+
+
+3. Compound assignment (+=, -=, *=, /=, %=, >>=, <<=, &=, ^=, |=)
+
+expression	          equivalent to...
+y += x;	              y = y + x;
+x -= 5;	              x = x - 5;
+x /= y;	              x = x / y;
+price *= units + 1;	  price = price * (units+1);
+
+
+4. Increment and decrement (++, --)
+In the case that the increase operator is used as a prefix (++x) of the value, the expression evaluates to the final value of x, once it is already increased.
+On the other hand, in case that it is used as a suffix (x++), the value is also increased, but the expression evaluates to the value that x had before being increased.
+
+Example 1
+x = 3;
+y = ++x;
+// x contains 4, y contains 4
+
+Example 2
+x = 3;
+y = x++;
+// x contains 4, y contains 3
+
+In Example 1, the value assigned to y is the value of x after being increased. While in Example 2, it is the value x had before being increased.
+
+5. Relational and comparison operators ( ==, !=, >, <, >=, <= )
+The result of such an operation is either true or false (i.e., a Boolean value).
+
+Suppose that a=2, b=3 and c=6, then:
+1 (a == 5)     // evaluates to false, since a is not equal to 5
+2 (a*b >= c)   // evaluates to true, since (2*3 >= 6) is true
+3 (b+4 > a*c)  // evaluates to false, since (3+4 > 2*6) is false
+4 ((b=2) == a) // evaluates to true
+
+6. Logical operators ( !, &&, || )
+
+&& OPERATOR (and)
+a	    b	    a && b
+true	true	true
+true	false	false
+false	true	false
+false	false	false
+
+|| OPERATOR (or)
+a	    b	    a || b
+true	true	true
+true	false	true
+false	true	true
+false	false	false
+
+( (5 == 5) && (3 > 6) )  // evaluates to false ( true && false )
+( (5 == 5) || (3 > 6) )  // evaluates to true ( true || false )
+
+7. Conditional ternary operator ( ? )
+condition ? result1 : result2
+
+If condition is true, the entire expression evaluates to result1, and otherwise to result2.
+7==5 ? 4 : 3     // evaluates to 3, since 7 is not equal to 5.
+7==5+2 ? 4 : 3   // evaluates to 4, since 7 is equal to 5+2.
+5>3 ? a : b      // evaluates to the value of a, since 5 is greater than 3.
+a>b ? a : b      // evaluates to whichever is greater, a or b.
+
+8. Comma operator ( , )
+The comma operator (,) is used to separate two or more expressions that are included where only one expression is expected.
+When the set of expressions has to be evaluated for a value, only the right-most expression is considered.
+
+For example, the following code:
+a = (b=3, b+2);
+would first assign the value 3 to b, and then assign b+2 to variable a.
+So, at the end, variable a would contain the value 5 while variable b would contain value 3.
+
+9. Bitwise operators ( &, |, ^, ~, <<, >> )
+
+10. Explicit type casting operator
+
+11. sizeof
+This operator accepts one parameter, which can be either a type or a variable, and returns the size in bytes of that type or object:
+x = sizeof (char);

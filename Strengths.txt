@@ -1,0 +1,2 @@
+Fundamental types represent the most basic types handled by the machines where the code may run.
+But one of the major strengths of the C++ language is its rich set of compound types, of which the fundamental types are mere building blocks.

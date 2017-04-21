@@ -11,6 +11,7 @@ Task: Read 3 numbers from stdin and print their sum to stdout.
 #include <vector>
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
 
 

@@ -1,0 +1,9 @@
+Overloaded functions
+In C++, two different functions can have the same name if their parameters are different;
+either because they have a different number of parameters, or because any of their parameters are of a different type.
+
+Functions templates
+The function sum could be overloaded for a lot of types, and it could make sense for all of them to have the same body.
+For cases such as this, C++ has the ability to define functions with generic types, known as function templates.
+Defining a function template follows the same syntax as a regular function, except that it is preceded by the template keyword
+and a series of template parameters enclosed in angle-brackets <>:

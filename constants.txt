@@ -1,0 +1,12 @@
+
+Typed constant expressions
+
+const double pi = 3.1415926;
+const char tab = '\t';
+
+Preprocessor definitions (#define)
+Another mechanism to name constant values is the use of preprocessor definitions. They have the following form:
+
+#define identifier replacement
+#define PI 3.14159
+#define NEWLINE '\n'

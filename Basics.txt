@@ -11,3 +11,18 @@ qualify each and every use of elements of the library (as we have done by prefix
 The most typical way to introduce visibility of these components is by means of using declarations:
 
 using namespace std;
+
+
+endl
+inserting the endl manipulator ends the line (printing a newline character and flushing the stream).
+
+
+The return value of main
+return 0;
+
+value	        description
+0	            The program was successful
+EXIT_SUCCESS	The program was successful (same as above).
+              This value is defined in header <cstdlib>.
+EXIT_FAILURE	The program failed.
+              This value is defined in header <cstdlib>.

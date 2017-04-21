@@ -1,0 +1,103 @@
+
+1. Selection statements: if and else
+if (condition) statement
+if (x == 100)
+{
+   cout << "x is ";
+   cout << x;
+}
+
+if (condition) statement1 else statement2
+if (x == 100)
+  cout << "x is 100";
+else
+  cout << "x is not 100";
+
+if (condition) statement1 else if(condition) statement2 ... else statement3
+  if (x > 0)
+    cout << "x is positive";
+  else if (x < 0)
+    cout << "x is negative";
+  else
+    cout << "x is 0";
+
+
+2. Iteration statements (loops)
+a. The while loop
+while (expression) statement
+
+b. The do-while loop
+do statement while (condition);
+The do-while loop is usually preferred over a while-loop when the statement needs to be executed at least once,
+such as when the condition that is checked to end of the loop is determined within the loop statement itself.
+
+c. The for loop
+for (initialization; condition; increase) statement;
+
+for ( n=0, i=100 ; n!=i ; ++n, --i )
+{
+   // whatever here...
+}
+
+Range-based for loop
+for ( declaration : range ) statement;
+Ranges are sequences of elements, including arrays, containers, and any other type supporting the functions begin and end;
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+  string str {"Hello!"};
+  for (char c : str)
+  {
+    cout << "[" << c << "]";
+  }
+  cout << '\n';
+}
+
+d. Jump statements
+The break statement
+  break leaves a loop, even if the condition for its end is not fulfilled.
+  It can be used to end an infinite loop, or to force it to end before its natural end.
+  For example, let's stop the countdown before its natural end:
+
+for (int n=10; n>0; n--)
+  {
+    cout << n << ", ";
+    if (n==3)
+    {
+      cout << "countdown aborted!"; //10, 9, 8, 7, 6, 5, 4, 3, countdown aborted!
+      break;
+    }
+  }
+
+
+The continue statement
+  The continue statement causes the program to skip the rest of the loop in the current iteration,
+  as if the end of the statement block had been reached, causing it to jump to the start of the following iteration.
+  For example, let's skip number 5 in our countdown:
+
+  for (int n=10; n>0; n--) {
+    if (n==5) continue;
+    cout << n << ", "; //10, 9, 8, 7, 6, 4, 3, 2, 1,
+  }
+
+e. Another selection statement: switch.
+The syntax of the switch statement is a bit peculiar. Its purpose is to check for a value among a number of possible constant expressions.
+It is something similar to concatenating if-else statements, but limited to constant expressions. Its most typical syntax is:
+
+switch (expression)
+{
+  case constant1:
+     group-of-statements-1;
+     break;
+  case constant2:
+     group-of-statements-2;
+     break;
+  .
+  .
+  .
+  default:
+     default-group-of-statements
+}

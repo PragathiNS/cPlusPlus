@@ -1,0 +1,60 @@
+Functions allow to structure programs in segments of code to perform individual tasks.
+In C++, a function is a group of statements that is given a name, and which can be called from some point of the program.
+
+The most common syntax to define a function is:
+type name ( parameter1, parameter2, ...) { statements }
+
+
+Arguments passed by value and by reference
+BY VALUE:
+This means that, when calling a function, what is passed to the function are the values of these arguments on the moment of the call,
+which are copied into the variables represented by the function parameters.
+For example, take:
+
+int x=5, y=3, z;
+z = addition ( x, y );
+
+BY REFERENCE:
+When a variable is passed by reference, what is passed is no longer a copy, but the variable itself, the variable identified by the function parameter,
+becomes somehow associated with the argument passed to the function, and any modification on their corresponding local variables within the function are
+reflected in the variables passed as arguments in the call.
+
+Efficiency considerations and const references:
+Calling a function with parameters taken by value causes copies of the values to be made.
+This is a relatively inexpensive operation for fundamental types such as int, but if the parameter is of a large compound type, it may result on certain overhead.
+
+On the flip side, functions with reference parameters are generally perceived as functions that modify the arguments passed,
+because that is why reference parameters are actually for.
+
+The solution is for the function to guarantee that its reference parameters are not going to be modified by this function.
+This can be done by qualifying the parameters as constant:
+
+string concatenate (const string& a, const string& b)
+{
+  return a+b;
+}
+
+By qualifying them as const, the function is forbidden to modify the values of neither a nor b,
+but can actually access their values as references (aliases of the arguments), without having to make actual copies of the strings.
+
+Therefore, const references provide functionality similar to passing arguments by value, but with an increased efficiency for parameters of large types.
+
+DEFAULT values in parameters
+In C++, functions can also have optional parameters, for which no arguments are required in the call, in such a way that,
+for example, a function with three parameters may be called with only two.
+For this, the function shall include a default value for its last parameter, which is used by the function when called with fewer arguments.
+For example:
+
+int divide (int a, int b=2)
+{
+  int r;
+  r=a/b;
+  return (r);
+}
+
+int main ()
+{
+  cout << divide (12) << '\n'; // 6
+  cout << divide (20,4) << '\n'; // 5
+  return 0;
+}
