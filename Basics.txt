@@ -1,0 +1,13 @@
+NAMESPACE
+std::cout --> explicit qualification,
+
+using namespace std; --> using declarations
+cout --> unqualified manner
+
+cout is part of the standard library, and all the elements in the standard C++ library are declared within what is called a namespace: the namespace std.
+
+In order to refer to the elements in the std namespace a program shall either
+qualify each and every use of elements of the library (as we have done by prefixing cout with std::), or introduce visibility of its components.
+The most typical way to introduce visibility of these components is by means of using declarations:
+
+using namespace std;
