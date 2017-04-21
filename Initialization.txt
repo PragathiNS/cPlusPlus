@@ -1,0 +1,20 @@
+In C++, there are three ways to initialize variables. They are all equivalent and are reminiscent of the evolution of the language over the years:
+
+1. c-like initialization  (because it is inherited from the C language)
+type identifier = initial_value; 
+For example, to declare a variable of type int called x and initialize it to a value of zero from the same moment it is declared, we can write:
+int x = 0;
+
+2. constructor initialization  (introduced by the C++ language)
+type identifier (initial_value); 
+For example:
+
+ 
+int x (0);
+
+3. uniform initialization ( introduced by the revision of the C++ standard, in 2011):
+type identifier {initial_value}; 
+For example:
+int x {0}; 
+
+
